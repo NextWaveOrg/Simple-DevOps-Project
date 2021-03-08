@@ -35,6 +35,10 @@ Ansible is an open-source automation platform. It is very, very simple to set up
    ```sh 
    sudo su - ansadmin
    ssh-keygen
+   exit
+   
+   sudo su -
+   hostname ansible-control-node
    ```
 1. Copy keys onto all ansible managed hosts (on Control node)
    ```sh 
