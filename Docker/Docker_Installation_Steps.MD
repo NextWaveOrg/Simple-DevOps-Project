@@ -27,6 +27,13 @@
 1. Create a tomcat docker container by pulling a docker image from the public docker registry
    ```sh
    docker run -d --name test-tomcat-server -p 8090:8080 tomcat:latest
+   #browser the public ip of the docker host machine with port 8090   http://<publicip of docker host>:8090
+   #in case the page is not loaded do the following
+   docker exec -it test-tomcat-server /bin/bash
+   cd webapps
+   cp -R ../webapps.dist/* .
+   
+   ##Now again browser the public ip of the docker host machine with port 8090   http://<publicip of docker host>:8090  and it should load the tomcat page
    ```
 
 ## Docker Installation on CentOS server
